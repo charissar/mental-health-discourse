@@ -2,7 +2,7 @@
 
 This repo contains the code used to retrieve New York Times articles regarding mental health and the accompanying modeling to identify the contexts in which mental health has been discussed in the NYT over the last decades.
 
-- data gathering (NYT API and web scraping notebooks)
+- data gathering (NYT API and web scraping)
 - text preprocessing
 - topic modeling
 - [visualization](http://htmlpreview.github.io/?https://github.com/charissarentier/mental-health-discourse/blob/master/d3_tree_viz.html) (cluster dendrogram visualization of main- and sub topics resulting from the analysis)
