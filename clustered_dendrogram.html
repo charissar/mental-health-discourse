@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:['wordtree']});
+      google.charts.setOnLoadCallback(drawSimpleNodeChart);
+      function drawSimpleNodeChart() {
+        var nodeListData = new google.visualization.arrayToDataTable([
+          ['id', 'childLabel', 'parent', 'size', { role: 'style' }],
+          [0, 'mental health', -1, 1, 'black'],
+          
+          [1, 'art/film/books', 0, 1, 'black'],
+          [2, 'childhood/family/education', 0, 1, 'black'],
+          [3, 'community programs/services', 0, 1, 'black'],
+          [4, 'company/benefits/health insurance', 0, 1, 'black'],
+          [5, 'family/home/work-life', 0, 1, 'black'],
+          [6, 'government/politics', 0, 1, 'black'],
+          [7, 'justice-/penitentiary system', 0, 1, 'black'],
+          [8, 'medical research', 0, 1, 'black'],
+          [9, 'police/shootings/murder', 0, 1, 'black'],
+          [10, 'sociological trends', 0, 1, 'black'],
+          [11, 'sports/games', 0, 1, 'black'],
+          [12, 'therapy/treatment/medication', 0, 1, 'black'],
+          [13, 'veterans/military/war', 0, 1, 'black'],
+          [14, 'violence/assault/abuse', 0, 1, 'black'],
+
+          [15, 'sociological trends', 1, 2, 'black'],
+          [16, 'community programs/services', 1, 1, 'black'],
+          [17, 'therapy/treatment/medication', 1, 1, 'black'],
+          [18, 'other', 1, 1, 'black'],
+          [19, 'none', 1, 1, 'black'],
+         
+          [20, 'family/home/work-life', 2, 5, 'black'],
+          [21, 'art/film/books', 2, 2, 'black'],
+          [22, 'therapy/treatment/medication', 2, 2, 'black'],
+          [23, 'other', 2, 1, 'black'],
+          [24, 'none', 2, 1, 'black'],
+          
+          [25, 'company/benefits/health insurance', 3, 5, 'black'],
+          [26, 'police/shootings/murder', 3, 1, 'black'],
+          [27, 'sociological trends', 3, 1, 'black'],
+          [28, 'other', 3, 1, 'black'],
+          [29, 'none', 3, 1, 'black'],
+
+          [30, 'other', 4, 1, 'black'],
+          [31, 'none', 4, 1, 'black'],
+          
+          [32, 'art/film/books', 5, 5, 'black'],
+          [33, 'therapy/treatment/medication', 5, 2, 'black'],
+          [34, 'medical research', 5, 2, 'black'],
+          [35, 'other', 5, 1, 'black'],
+          [36, 'none', 5, 1, 'black'],
+       
+          [75, 'community programs/services', 6, 5, 'black'],
+          [76, 'company/benefits/health insurance', 6, 2, 'black'],       
+          [77, 'justice-/penitentiary system', 6, 1, 'black'],
+          [78, 'none', 6, 1, 'black'],   
+          [79, 'other', 6, 1, 'black'],
+
+          [37, 'police/shootings/murder', 7, 5, 'black'],
+          [38, 'community programs/services', 7, 2, 'black'],
+          [39, 'therapy/treatment/medication', 7, 2, 'black'],
+          [40, 'other', 7, 1, 'black'],
+          [41, 'none', 7, 1, 'black'],
+
+          [42, 'therapy/treatment/medication', 8, 5, 'black'],
+          [43, 'sociological trends', 8, 2, 'black'],
+          [44, 'community programs/services', 8, 1, 'black'],
+          [45, 'other', 8, 1, 'black'],
+          [46, 'none', 8, 1, 'black'],       
+ 
+          [47, 'veterans/military/war', 9, 1, 'black'],
+          [48, 'sociological trends', 9, 1, 'black'],
+          [49, 'company/benefits/health insurance', 9, 1, 'black'],
+          [51, 'none', 9, 1, 'black'],       
+          
+          [52, 'company/benefits/health insurance', 10, 1, 'black'],
+          [53, 'veterans/military/war', 10, 1, 'black'],
+          [55, 'none', 10, 1, 'black'],       
+
+          [56, 'family/home/work-life', 11, 5, 'black'],
+          [57, 'medical research', 11, 1, 'black'],
+          [58, 'art/film/books', 11, 1, 'black'],
+          [59, 'other', 11, 1, 'black'],
+          [60, 'none', 11, 1, 'black'],       
+
+          [61, 'sociological trends', 12, 5, 'black'],
+          [62, 'community programs/services', 12, 2, 'black'],
+          [63, 'company/benefits/health insurance', 12, 1, 'black'],
+          [64, 'other', 12, 1, 'black'],
+          [65, 'none', 12, 1, 'black'],       
+          
+          [67, 'company/benefits/health insurance', 13, 1, 'black'],
+          [69, 'none', 13, 1, 'black'],
+          
+          [70, 'therapy/treatment/medication', 14, 1, 'black'],
+          [71, 'sociological trends', 14, 1, 'black'],       
+          [72, 'medical research', 14, 1, 'black'],
+          [73, 'none', 14, 1, 'black'],   
+          [74, 'other', 14, 1, 'black'],
+ 
+
+          
+        ]);
+
+        var options = {
+          colors: ['black', 'green', 'red'],
+          wordtree: {
+            format: 'explicit',
+            type: 'suffix'
+          }
+        };
+
+        var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_explicit'));
+        wordtree.draw(nodeListData, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wordtree_explicit" style="width: 3000px; height: 500px;"></div>
+  </body>
+</html>
